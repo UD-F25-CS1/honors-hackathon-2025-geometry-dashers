@@ -182,7 +182,8 @@ def main_game_2player(state: State, p1_name: str, p2_name: str) -> Page:
             return Page(state, [f"Congratulations, {state.player1.name}! You have won the Tung Tung Computer Science Trivia!"
                 ])
         if state.player2.score > state.player1.score:
-            return Page(state, [f"Congratulations, {state.player2.name}! You have won the Tung Tung Computer Science Trivia!"
+            return Page(state, [f"Congratulations, {state.player2.name}! You have won the Tung Tung Computer Science Trivia!",
+                                Image("contratulatory dance.gif")
                 ])
         
     state.player1.name = p1_name
@@ -403,6 +404,7 @@ def cat2_100(state: State) -> Page:
           <source src="history100.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "What programming language is named after a coffee?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Java"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -429,6 +431,7 @@ def cat5_100(state: State) -> Page:
           <source src="gen_knowledge100.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "How many megabytes are in a gigabyte?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "1000"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -449,6 +452,7 @@ def cat2_200(state: State) -> Page:
           <source src="history200.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "Who made python?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Guido van Rossum"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -471,6 +475,7 @@ def cat4_200(state: State) -> Page:
 def cat5_200(state: State) -> Page:
     state.points_won = 200
     return Page(state, ["What software dev. company has an octocat for the logo?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "GitHub"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -491,6 +496,7 @@ def cat2_300(state: State) -> Page:
           <source src="history300.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "What show inspired pythons name?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Monty Python's Flying Circus"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -513,6 +519,7 @@ def cat4_300(state: State) -> Page:
 def cat5_300(state: State) -> Page:
     state.points_won = 300
     return Page(state, ["What does HTTP stand for?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Hypertexy Transfer Protocol"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -533,6 +540,7 @@ def cat2_400(state: State) -> Page:
           <source src="history400.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "Who made binary?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Gottfried Wilhelm Leibniz"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -555,6 +563,7 @@ def cat4_400(state: State) -> Page:
 def cat5_400(state: State) -> Page:
     state.points_won = 400
     return Page(state, ["What does URL stand for?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "Uniform Resource Locator"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -575,6 +584,7 @@ def cat2_500(state: State) -> Page:
           <source src="history500.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
         </audio>''', "What was the first electronic computer called?",
+                        Image("standingtungforquestions.png", 400,400),
                         SelectBox("show_answer", ["Show answer!", "ENIAC/Atenaoff-Berry"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -597,7 +607,8 @@ def cat4_500(state: State) -> Page:
 def cat5_500(state: State) -> Page:
     state.points_won = 500
     return Page(state, ["What famous sandbox game is Java based?",
-                        SelectBox("show_answer", ["Minecraft"]),
+                        Image("standingtungforquestions.png", 400,400),
+                        SelectBox("show_answer", ["Show Answer!", "Minecraft"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
                     ])
@@ -613,3 +624,4 @@ START SERVER
 
 
 start_server(State(Player("", 2000), Player("", 0), Player("", 0), Player("", 0), 0))
+
