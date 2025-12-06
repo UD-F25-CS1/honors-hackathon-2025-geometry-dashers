@@ -89,6 +89,7 @@ def index(state: State) -> Page:
         Your browser does not support the audio element.
         </audio>''', bold("Welcome to Tung Tung Computer Science Trivia!"),
                         "how many players are there?",
+                        Image("standingtungforquestions.png", 400,400),
                         Button("2 Players", select2players),
                         Button("3 Players", select3players),
                         Button("4 Players", select4players)
