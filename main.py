@@ -179,7 +179,8 @@ def main_game_2player(state: State, p1_name: str, p2_name: str) -> Page:
     
     if state.player1.score + state.player2.score >= 7500:
         if state.player1.score > state.player2.score:
-            return Page(state, [f"Congratulations, {state.player1.name}! You have won the Tung Tung Computer Science Trivia!"
+            return Page(state, [f"Congratulations, {state.player1.name}! You have won the Tung Tung Computer Science Trivia!",
+                                Image("contratulatory dance.gif")
                 ])
         if state.player2.score > state.player1.score:
             return Page(state, [f"Congratulations, {state.player2.name}! You have won the Tung Tung Computer Science Trivia!",
