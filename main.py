@@ -83,7 +83,11 @@ ROUTES
 
 @route
 def index(state: State) -> Page:
-    return Page(state, [bold("Welcome to Tung Tung Computer Science Trivia!"),
+    return Page(state, ['''<audio controls autoplay>
+          <source src="introduction.ogg" type="audio/ogg">
+          <source src="introduction.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', bold("Welcome to Tung Tung Computer Science Trivia!"),
                         "how many players are there?",
                         Button("2 Players", select2players),
                         Button("3 Players", select3players),
@@ -393,7 +397,11 @@ def cat1_100(state: State) -> Page:
 @route
 def cat2_100(state: State) -> Page:
     state.points_won = 100
-    return Page(state, ["What programming language is named after a coffee?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="history100.ogg" type="audio/ogg">
+          <source src="history100.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "What programming language is named after a coffee?",
                         SelectBox("show_answer", ["Show answer!", "Java"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -415,7 +423,11 @@ def cat4_100(state: State) -> Page:
 @route
 def cat5_100(state: State) -> Page:
     state.points_won = 100
-    return Page(state, ["How many megabytes are in a gigabyte?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="gen_knowledge100.ogg" type="audio/ogg">
+          <source src="gen_knowledge100.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "How many megabytes are in a gigabyte?",
                         SelectBox("show_answer", ["Show answer!", "1000"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -431,7 +443,11 @@ def cat1_200(state: State) -> Page:
 @route
 def cat2_200(state: State) -> Page:
     state.points_won = 200
-    return Page(state, ["Who made python?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="history200.ogg" type="audio/ogg">
+          <source src="history200.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "Who made python?",
                         SelectBox("show_answer", ["Show answer!", "Guido van Rossum"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -469,7 +485,11 @@ def cat1_300(state: State) -> Page:
 @route
 def cat2_300(state: State) -> Page:
     state.points_won = 300
-    return Page(state, ["What show inspired pythons name?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="history300.ogg" type="audio/ogg">
+          <source src="history300.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "What show inspired pythons name?",
                         SelectBox("show_answer", ["Show answer!", "Monty Python's Flying Circus"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -507,7 +527,11 @@ def cat1_400(state: State) -> Page:
 @route
 def cat2_400(state: State) -> Page:
     state.points_won = 400
-    return Page(state, ["Who made binary?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="history400.ogg" type="audio/ogg">
+          <source src="history400.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "Who made binary?",
                         SelectBox("show_answer", ["Show answer!", "Gottfried Wilhelm Leibniz"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
@@ -545,7 +569,11 @@ def cat1_500(state: State) -> Page:
 @route
 def cat2_500(state: State) -> Page:
     state.points_won = 500
-    return Page(state, ["What was the first electronic computer called?",
+    return Page(state, ['''<audio controls autoplay>
+          <source src="history500.ogg" type="audio/ogg">
+          <source src="history500.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+        </audio>''', "What was the first electronic computer called?",
                         SelectBox("show_answer", ["Show answer!", "ENIAC/Atenaoff-Berry"]),
                         SelectBox("who_won", get_active_players(state), "Who won?"),
                         Button("Back", return_to_game)
